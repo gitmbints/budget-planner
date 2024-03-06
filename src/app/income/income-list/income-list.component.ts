@@ -17,7 +17,6 @@ export class IncomeListComponent implements OnInit {
   }
 
   private getIncomeList() {
-    console.table(this.income);
     this.income = this.incomeService.getIncome();
   }
 }
