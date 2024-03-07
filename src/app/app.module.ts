@@ -7,12 +7,14 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { IncomeModule } from './income/income.module';
 import { ExpenseModule } from './expense/expense.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { FlowbiteDatepickerDirective } from './flowbite-datepicker.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    FlowbiteDatepickerDirective
   ],
   imports: [
     BrowserModule,
