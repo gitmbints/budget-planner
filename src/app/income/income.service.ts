@@ -13,4 +13,8 @@ export class IncomeService {
   getIncome(): Income[] {
     return this.income;
   }
+
+  addIncome(newIncome: Income): void {
+    this.income.push(newIncome);
+  }
 }

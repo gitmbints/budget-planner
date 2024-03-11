@@ -8,21 +8,23 @@ import { IncomeModule } from './income/income.module';
 import { ExpenseModule } from './expense/expense.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { FlowbiteDatepickerDirective } from './flowbite-datepicker.directive';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     PageNotFoundComponent,
-    FlowbiteDatepickerDirective
+    FlowbiteDatepickerDirective,
   ],
   imports: [
     BrowserModule,
     IncomeModule,
     ExpenseModule,
-    AppRoutingModule
+    ReactiveFormsModule,
+    AppRoutingModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
