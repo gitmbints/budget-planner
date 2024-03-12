@@ -19,4 +19,8 @@ export class IncomeListComponent implements OnInit {
   private getIncomeList() {
     this.income = this.incomeService.getIncome();
   }
+
+  removeIncomeFromList(incomeId: number) {
+    this.incomeService.deleteIncome(incomeId);
+  }
 }

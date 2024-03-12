@@ -6,15 +6,23 @@ import { MOCK_INCOMES } from './mock-income-list';
   providedIn: 'root',
 })
 export class IncomeService {
-  private income: Income[] = MOCK_INCOMES;
+  private incomeList: Income[] = MOCK_INCOMES;
 
   constructor() {}
 
   getIncome(): Income[] {
-    return this.income;
+    return this.incomeList;
   }
 
-  addIncome(newIncome: Income): void {
-    this.income.push(newIncome);
+  addIncome(newIncome: Income) {
+    this.incomeList.push(newIncome);
+  }
+
+  deleteIncome(incomeId: number) {
+    const index = this.incomeList.findIndex((item) => item.id === incomeId);
+
+    if (index !== -1) {
+      this.incomeList.splice(index, 1);
+    }
   }
 }

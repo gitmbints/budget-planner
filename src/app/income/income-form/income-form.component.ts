@@ -29,6 +29,9 @@ export class IncomeFormComponent {
 
     this.incomeService.addIncome(newIncome);
 
-    this.incomeForm.reset();
+    this.incomeForm.patchValue({
+      description: '',
+      amount: '',
+    });
   }
 }
