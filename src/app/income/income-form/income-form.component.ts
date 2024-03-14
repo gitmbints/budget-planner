@@ -21,7 +21,7 @@ export class IncomeFormComponent {
     const formValues = this.incomeForm.value;
 
     const newIncome: Income = {
-      id: Math.random() * 10_000_000,
+      id: Math.random() * 100,
       description: formValues.description!,
       amount: +formValues.amount!,
       date: formValues.date!,

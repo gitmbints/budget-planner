@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Income } from '../income';
 import { IncomeService } from '../income.service';
 
@@ -8,8 +9,9 @@ import { IncomeService } from '../income.service';
   styleUrls: ['./income-list.component.scss'],
 })
 export class IncomeListComponent implements OnInit {
-  income: Income[] = [];
+  incomeList: Income[] = [];
   totalIncome: number = 0;
+  incomeId!: number;
 
   constructor(private incomeService: IncomeService) {}
 
@@ -20,7 +22,7 @@ export class IncomeListComponent implements OnInit {
 
   private getIncomeList() {
     this.incomeService.getIncome().subscribe((incomeList) => {
-      this.income = incomeList;
+      this.incomeList = incomeList;
     });
   }
 
@@ -30,7 +32,8 @@ export class IncomeListComponent implements OnInit {
     });
   }
 
-  removeIncomeFromList(incomeId: number) {
-    this.incomeService.deleteIncome(incomeId);
+  getIncomeId(incomeId: number) {
+    console.log(this.incomeId);
+    this.incomeId = incomeId;
   }
 }
