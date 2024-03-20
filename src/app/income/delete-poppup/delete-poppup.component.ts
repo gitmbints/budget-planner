@@ -7,11 +7,11 @@ import { IncomeService } from '../income.service';
   styleUrls: ['./delete-poppup.component.scss'],
 })
 export class DeletePoppupComponent {
-  @Input({ required: true }) incomeId!: number;
+  @Input() incomeId?: number;
 
   constructor(private incomeService: IncomeService) {}
 
-  deleteIncomeFromList() {
+  /* deleteIncomeFromList() {
     this.incomeService.deleteIncome(this.incomeId);
-  }
+  } */
 }

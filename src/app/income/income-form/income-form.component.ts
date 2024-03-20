@@ -17,7 +17,7 @@ export class IncomeFormComponent {
 
   constructor(private fb: FormBuilder, private incomeService: IncomeService) {}
 
-  onSubmit() {
+  /* onSubmit() {
     const formValues = this.incomeForm.value;
 
     const newIncome: Income = {
@@ -33,5 +33,5 @@ export class IncomeFormComponent {
       description: '',
       amount: '',
     });
-  }
+  } */
 }
